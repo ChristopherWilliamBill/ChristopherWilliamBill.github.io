@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Sensus Umat SIMU</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulir Data Umat</h1>
+   
+    <form>
+      <fieldset>
+        <legend>Data Diri & Identitas</legend>
+        
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="jenis-kelamin">Jenis Kelamin:</label>
+
+        <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" required>
+        <label for="laki-laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan" required>
+        <label for="perempuan">Perempuan</label><br>
+
+        <label for="tanggal-kelahiran">Tanggal Kelahiran:</label>
+        <input type="text" id="tanggal-kelahiran" name="tanggal-kelahiran" required><span>(tgl/bln/thn)</span><br>
+        <label for="kota-lahir">Kota Lahir:</label>
+        <input type="text" id="kota-lahir" name="kota-lahir" required><br>
+        
+        <label for="agama">Agama:</label>
+        
+        <input type="radio" id="katolik" name="agama" value="katolik" required>
+        <label for="katolik">Katolik</label>
+        
+        <input type="radio" id="kristen" name="agama" value="kristen" required>
+        <label for="kristen">Kristen</label>
+        
+        <input type="radio" id="buddha" name="agama" value="buddha" required>
+        <label for="buddha">Buddha</label>
+        
+        <input type="radio" id="tidak-beragama" name="agama" value="tidak-beragama" required>
+        <label for="tidak-beragama">Tidak Beragama</label>
+        
+        <input type="radio" id="islam" name="agama" value="islam" required>
+        <label for="islam">Islam</label>
+        
+        <input type="radio" id="hindu" name="agama" value="hindu" required>
+        <label for="hindu">Hindu</label>
+        
+        <input type="radio" id="konghucu" name="agama" value="konghucu" required>
+        <label for="konghucu">Konghucu</label>
+        
+        <input type="radio" id="lainnya-agama" name="agama" value="lainnya-agama" required>
+        <label for="lainnya-agama">Lainnya</label>
+        <input type="text" id="lainnya-agama2" name="agama2"><br>
+        
+        <label for="keuskupan">Keuskupan:</label>
+        <input type="text" id="keuskupan" name="keuskupan" required><br>
+        
+        <label for="paroki">Paroki:</label>
+        <input type="text" id="paroki" name="paroki" required><br>
+        <label for="lingkungan">Lingkungan:</label>
+        <input type="text" id="lingkungan" name="lingkungan" required><br>
+      
+        <label for="golongan-darah">Golongan Darah:</label>
+        
+        <input type="radio" id="a" name="golongan-darah" value="a" required>
+        <label for="a">A</label>
+        
+        <input type="radio" id="b" name="golongan-darah" value="b" required>
+        <label for="b">B</label>
+        
+        <input type="radio" id="ab" name="golongan-darah" value="ab" required>
+        <label for="ab">AB</label>
+        
+        <input type="radio" id="o" name="golongan-darah" value="o" required>
+        <label for="o">O</label><br>
+        
+        <label for="ras/suku">Ras / Suku:</label>
+        <input type="text" id="ras/suku" name="ras/suku" required><br>
+        
+        <label for="kewarganegaraan">Kewarganegaraan:</label>
+        
+        <input type="radio" id="indonesia" name="kewarganegaraan" value="Indonesia" required>
+        <label for="indonesia">Indonesia</label>
+        
+        <input type="radio" id="asing" name="kewarganegaraan" value="asing" required>
+        <label for="asing">Asing</label>
+        
+        <input type="radio" id="lainnya-kewarganegaraan" name="kewarganegaraan" value="Lainnya" required>
+        <label for="lainnya-kewarganegaraan">Lainnya</label>
+        <input type="text" id="lainnya-kewarganegaraan2" name="kewarganegaraan2"><br>
+        
+        <label for="bahasa-utama">Bahasa Utama:</label>
+        
+        <input type="radio" id="bahasa-indonesia" name="bahasa-utama" value="bahasa-indonesia" required>
+        <label for="bahasa-indonesia">Bahasa Indonesia</label>
+        
+        <input type="radio" id="bahasa-inggris" name="bahasa-utama" value="bahasa-inggris" required>
+        <label for="bahasa-inggris">Bahasa Inggris</label>
+        
+        <input type="radio" id="bahasa-mandarin" name="bahasa-utama" value="bahasa-mandarin" required>
+        <label for="bahasa-mandarin">Bahasa Mandarin</label>
+        
+        <input type="radio" id="bahasa-sunda" name="bahasa-utama" value="bahasa-sunda" required>
+        <label for="bahasa-sunda">Bahasa Sunda</label>
+        
+        <input type="radio" id="bahasa-jawa" name="bahasa-utama" value="bahasa-jawa" required>
+        <label for="bahasa-jawa">Bahasa Jawa</label>
+        
+        <input type="radio" id="bahasa-batak" name="bahasa-utama" value="bahasa-batak" required>
+        <label for="bahasa-batak">Bahasa Batak</label>
+        
+        <input type="radio" id="lainnya-bahasa-utama" name="bahasa-utama" value="lainnya-bahasa-utama" required>
+        <label for="lainnya-bahasa-utama">Lainnya</label>
+        <input type="text" id="lainnya-bahasa-utama" name="bahasa-utama2"><br>
+        
+        <label for="tipeprotestan">Tipe Protestan:</label>
+        
+        <input type="radio" id="baptis" name="tipeprotestan" value="Baptis" required>
+        <label for="baptis">Baptis</label>
+        
+        <input type="radio" id="anglikan" name="tipeprotestan" value="Anglikan" required>
+        <label for="anglikan">Anglikan</label>
+        
+        <input type="radio" id="protestan" name="tipeprotestan" value="Protestan" required>
+        <label for="protestan">Protestan</label>
+        
+        <input type="radio" id="lainnya-tipeprotestan" name="tipeprotestan" value="Lainnya" required>
+        <label for="lainnya-tipeprotestan">Lainnya</label>
+        <input type="text" id="lainnya-tipeprotestan2" name="tipeprotestan2"><br>
+      
+      	<label for="agama-sebelumnya">Agama Sebelumnya:</label>
+        
+        <input type="radio" id="katolik2" name="agama-sebelumnya" value="katolik" required>
+        <label for="katolik2">Katolik</label>
+        
+        <input type="radio" id="kristen2" name="agama-sebelumnya" value="kristen" required>
+        <label for="kristen2">Kristen</label>
+        
+        <input type="radio" id="buddha2" name="agama-sebelumnya" value="buddha" required>
+        <label for="buddha2">Buddha</label>
+        
+        <input type="radio" id="tidak-beragama2" name="agama-sebelumnya" value="tidak-beragama" required>
+        <label for="tidak-beragama2">Tidak Beragama</label>
+        
+        <input type="radio" id="islam2" name="agama-sebelumnya" value="islam" required>
+        <label for="islam2">Islam</label>
+        
+        <input type="radio" id="hindu2" name="agama-sebelumnya" value="hindu" required>
+        <label for="hindu2">Hindu</label>
+        
+        <input type="radio" id="konghucu2" name="agama-sebelumnya" value="konghucu" required>
+        <label for="konghucu2">Konghucu</label>
+        
+        <input type="radio" id="lainnya-agama2" name="agama-sebelumnya" value="lainnya-agama" required>
+        <label for="lainnya-agama2">Lainnya</label>
+        <input type="text" id="lainnya-agama3" name="agama-sebelumnya2"><br>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Kontak</legend>
+        
+        <label for="alamat">Alamat:</label>
+      	<input type="text" id="alamat" name="alamat" required><br>
+        
+        <label for="kabupaten">Kabupaten:</label>
+      	<input type="text" id="kabupaten" name="kabupaten" required><br>
+        
+        <label for="kota">Kota:</label>
+      	<input type="text" id="kota" name="kota" required><br>
+        
+        <label for="kecamatan">Kecamatan:</label>
+      	<input type="text" id="kecamatan" name="kecamatan" required><br>
+        
+        <label for="kelurahan">Kelurahan:</label>
+      	<input type="text" id="kelurahan" name="kelurahan" required><br>
+        
+				<label for="rt">RT:</label>
+      	<input type="text" id="rt" name="rt" required><br>
+        
+        <label for="rw">RW:</label>
+      	<input type="text" id="rw" name="rw" required><br>
+        
+        <label for="bulantinggal">Bulan Tinggal:</label>
+      	<input type="text" id="bulantinggal" name="bulantinggal" required><br>
+        
+        <label for="tahuntinggal">Tahun Tinggal:</label>
+      	<input type="text" id="tahuntinggal" name="tahuntinggal" required><br>
+        
+        <label for="notelp">Nomor Telepon:</label>
+      	<input type="text" id="notelp" name="notelp" required><br>
+        
+        <label for="nohp">Nomor Handphone:</label>
+      	<input type="text" id="nohp" name="nohp" required><br>
+        
+        <label for="email">Email:</label>
+      	<input type="email" id="email" name="email" required><br>
+
+      </fieldset>
+    </form>    
+  </body>
+</html>
