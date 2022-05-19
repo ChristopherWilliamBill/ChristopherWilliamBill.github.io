@@ -190,17 +190,6 @@
   
   <script language="javascript" src="lz-string.js" defer charset="utf-8"></script>
   <script language="javascript" src="qrcode.js" defer charset="utf-8"></script>
-  
-  <script>
-    (function() {
-      if(window.location.hash) {
-          var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-          console.log(hash)
-        } else {
-          console.log("gaada")
-        }
-    });
-  </script>
 
   <script type="text/javascript" defer>
     function handleSubmit(event) {
@@ -218,6 +207,13 @@
 
     const form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
+
+    if(window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+        console.log(hash)
+      } else {
+        console.log("gaada")
+    }
   </script>
 </html>
 
