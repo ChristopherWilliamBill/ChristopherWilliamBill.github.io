@@ -198,7 +198,9 @@
       let value = Object.fromEntries(data.entries());
       let jsonstring = JSON.stringify(value);
       let jsonstringcompressed = LZString.compressToBase64(jsonstring);
-      new QRCode(document.getElementById("qrcode"), "https://christopherwilliambill.github.io/#"+jsonstringcompressed);
+      let qrDiv = document.getElementById("qrcode");
+      qrDiv.innerHTML = "";
+      new QRCode(qrDiv, "https://christopherwilliambill.github.io/#"+jsonstringcompressed);
     }
 
     let form = document.querySelector('form');
