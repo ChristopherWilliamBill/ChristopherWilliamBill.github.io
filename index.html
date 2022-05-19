@@ -188,31 +188,34 @@
     </form>    
   </body>
   
-  <script language="javascript" src="lz-string.js" defer charset="utf-8"></script>
-  <script language="javascript" src="qrcode.js" defer charset="utf-8"></script>
+  <script language="javascript" src="lz-string.js" charset="utf-8"></script>
+  <script language="javascript" src="qrcode.js" charset="utf-8"></script>
 
   <script type="text/javascript" defer>
     function handleSubmit(event) {
-    	event.preventDefault();
-      const data = new FormData(event.target);
-      const value = Object.fromEntries(data.entries());
+      event.preventDefault();
+      let data = new FormData(event.target);
+      let value = Object.fromEntries(data.entries());
       let jsonstring = JSON.stringify(value);
-      console.log(jsonstring);
-
       let jsonstringcompressed = LZString.compressToBase64(jsonstring);
-      console.log(jsonstringcompressed)
-
       new QRCode(document.getElementById("qrcode"), "https://christopherwilliambill.github.io/#"+jsonstringcompressed);
     }
 
-    const form = document.querySelector('form');
+    let form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
 
     if(window.location.hash) {
-        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-        console.log(hash)
-      } else {
-        console.log("gaada")
+      let hash = window.location.hash.substring(1);
+      let jsonstringdecompressed = JSON.parse(LZString.decompressFromBase64(hash));
+      for (let [key, value] of Object.entries(jsonstringdecompressed) ) {
+        let field = document.getElementById(key);
+        if(field == null){
+          document.getElementById(value).checked = true;
+        }
+        else{
+          field && (field.value = value);
+        }
+      }
     }
   </script>
 </html>
